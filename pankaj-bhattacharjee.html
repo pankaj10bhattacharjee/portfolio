@@ -560,6 +560,118 @@
       color: var(--muted);
     }
 
+    /* ─── ADVENTURE SPORTS ─── */
+    #adventure {
+      background: #0f1012;
+      color: var(--cream);
+    }
+
+    #adventure .section-title {
+      color: var(--cream);
+    }
+
+    #adventure .section-number {
+      color: var(--gold-light);
+    }
+
+    #adventure .section-line {
+      background: rgba(247, 243, 237, 0.15);
+    }
+
+    .adventure-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    .adventure-card {
+      background: #18191c;
+      padding: 3rem 2.2rem;
+      border: 1px solid rgba(247, 243, 237, 0.06);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      opacity: 0;
+      transform: translateY(20px);
+      width: calc(33.333% - 1.7rem);
+      min-width: 290px;
+    }
+
+    .adventure-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .adventure-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--gold-light);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .adventure-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212, 168, 67, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .adventure-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .adventure-icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+      background: rgba(212, 168, 67, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .adventure-card:hover .adventure-icon {
+      background: var(--gold-light);
+      color: var(--ink);
+    }
+
+    .adventure-icon svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      stroke: var(--gold-light);
+      stroke-width: 1.5;
+      fill: none;
+      transition: stroke 0.3s ease;
+    }
+
+    .adventure-card:hover .adventure-icon svg {
+      stroke: var(--ink);
+    }
+
+    .adventure-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--cream);
+    }
+
+    .adventure-desc {
+      font-size: 0.68rem;
+      color: rgba(247, 243, 237, 0.65);
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+
     /* ─── CONNECT / SOCIAL ─── */
     #connect {
       background: var(--ink);
@@ -760,6 +872,10 @@
         grid-template-columns: 1fr;
       }
 
+      .adventure-card {
+        width: 100%;
+      }
+
       .timeline-item {
         grid-template-columns: 1fr;
       }
@@ -786,6 +902,7 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#adventure">Adventure</a></li>
       <li><a href="#connect">Connect</a></li>
     </ul>
   </nav>
@@ -1062,10 +1179,104 @@
     </div>
   </section>
 
+  <!-- ADVENTURE SPORTS -->
+  <section id="adventure">
+    <div class="section-header">
+      <span class="section-number">05 — Adventure</span>
+      <h2 class="section-title">Off-Duty Passions</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="adventure-grid">
+      <div class="adventure-card">
+        <div class="adventure-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="18" r="3"></circle>
+            <path d="M12 18h3m-9 0h3m-1 0c0-3.3 2.7-6 6-6h1c1 0 2-1 2-2V7c0-1.1-.9-2-2-2h-3L8 11.5c-.7.5-1.5.8-2.3.8H3">
+            </path>
+            <path d="M16.5 12.5L19 10h3"></path>
+          </svg>
+        </div>
+        <h3 class="adventure-name">Motorcycle Cruising</h3>
+        <p class="adventure-desc">
+          Fueling the spirit of adventure on the open road. Avid cruiser rider, exploring landscapes and long-distance
+          highways aboard a Kawasaki Vulcan S 650cc.
+        </p>
+      </div>
+      <div class="adventure-card">
+        <div class="adventure-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.5 2 2 5.5 2 9c0 2 2 3.5 5 4.5 2.5.8 7.5.8 10 0 3-1 5-2.5 5-4.5 0-3.5-4.5-7-10-7z"></path>
+            <path d="M12 2v20"></path>
+            <path d="M2 9l10 13"></path>
+            <path d="M22 9L12 22"></path>
+            <path d="M7 11.5L12 22"></path>
+            <path d="M17 11.5L12 22"></path>
+          </svg>
+        </div>
+        <h3 class="adventure-name">Paragliding</h3>
+        <p class="adventure-desc">
+          Embracing wind currents, altitude, and absolute freedom. Chasing thermals high above scenic mountain ridges
+          and experiencing flight from its most raw perspective.
+        </p>
+      </div>
+      <div class="adventure-card">
+        <div class="adventure-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 17c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0 4-1.5 6 0"></path>
+            <path d="M2 11c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0 4-1.5 6 0"></path>
+            <path d="M7 3l7 7-3 4"></path>
+          </svg>
+        </div>
+        <h3 class="adventure-name">River Rafting</h3>
+        <p class="adventure-desc">
+          Conquering challenging river currents and high-volume white water rapids. A high-energy outdoor pursuit
+          demanding swift synchronization and focus under pressure.
+        </p>
+      </div>
+      <div class="adventure-card">
+        <div class="adventure-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+            <path
+              d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
+            </path>
+          </svg>
+        </div>
+        <h3 class="adventure-name">Classic Music</h3>
+        <p class="adventure-desc">
+          Finding focus and soulful inspiration in legendary melodies. A deep appreciation for iconic artists like Pink
+          Floyd, Elton John, Bon Jovi, Richard Marx, Eagles, Kenny Rogers, Backstreet Boys, and the golden voice of
+          Kishore Kumar.
+        </p>
+      </div>
+      <div class="adventure-card">
+        <div class="adventure-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <h3 class="adventure-name">Avid Reading</h3>
+        <p class="adventure-desc">
+          Nurturing intellectual curiosity and a lifelong passion for learning. Exploring leadership insights in <em>The
+            7 Habits of Highly Effective People</em>, operational wisdom in <em>The Toyota Way</em>, raw perspectives in
+          autobiographies and war stories, alongside enriching novels and the lyrical heritage of classic Bengali
+          literature.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- CONNECT / SOCIAL -->
   <section id="connect">
     <div class="section-header">
-      <span class="section-number">05 — Connect</span>
+      <span class="section-number">06 — Connect</span>
       <h2 class="section-title">Find Me Online</h2>
     </div>
     <p class="connect-tagline">Let's build something meaningful together.</p>
@@ -1142,7 +1353,7 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.timeline-item, .skill-card, .edu-card').forEach(el => {
+    document.querySelectorAll('.timeline-item, .skill-card, .edu-card, .adventure-card').forEach(el => {
       observer.observe(el);
     });
   </script>
